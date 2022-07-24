@@ -1,2 +1,2 @@
 # Dblog
-A blogging site exclusive for National Institute of Technology Delhi 
+A blogging site made with MERN Stack
