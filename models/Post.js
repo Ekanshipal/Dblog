@@ -13,25 +13,17 @@ const PostSchema=new mongoose.Schema({
         required:[true,"can't be blank"],
         
     },
-    photo:{
-        type:'string',
-        required:false,
-    },
-    username:{
-        type:'string',
-        required:'true',
-        
-    },
-    categories:{
-        type:Array,
+    author:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'User',
         required:true,
-
     },
-
-   
-
-
-},{timeseries:true})
+    createdAt: {
+        type: Date,
+        default: Date.now
+    },
+    tags:[String],
+})[timestamp:true]
 
 const Post=mongoose.model('Post',PostSchema)
 module.exports=Post;
